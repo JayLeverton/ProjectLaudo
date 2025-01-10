@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter as HashRouter, Routes, Route } from "react-router-dom";
 import { Navbar } from "./components/Navbar";
 import { Auth } from "./pages/auth";
 import { Home } from "./pages/home";
@@ -9,7 +9,7 @@ import { TvShow } from "./pages/tvshow";
 function App() {
   return (
     <div>
-      <Router>
+      <HashRouter>
         <Navbar></Navbar>
         <Routes>
           <Route path="/" element={<Home />}></Route>
@@ -18,7 +18,7 @@ function App() {
           <Route path="/movie/:id" element={<Movie />}></Route>
           <Route path="/tvshow/:id" element={<TvShow />}></Route>
         </Routes>
-      </Router>
+      </HashRouter>
     </div>
   );
 }
